@@ -13,7 +13,10 @@ namespace WebApp000002.Data
             : base(options)
         {
         }
-
         public DbSet<WebApp000002.Models.paciente> paciente { get; set; } = default!;
+        public DbSet<WebApp000002.Models.Consulta> Consulta { get; set; } = default!;
+ 
+
+
     }
 }

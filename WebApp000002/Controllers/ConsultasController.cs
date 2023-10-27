@@ -10,87 +10,87 @@ using WebApp000002.Models;
 
 namespace WebApp000002.Controllers
 {
-    public class pacientesController : Controller
+    public class ConsultasController : Controller
     {
         private readonly DBContext _context;
 
-        public pacientesController(DBContext context)
+        public ConsultasController(DBContext context)
         {
             _context = context;
         }
 
-        // GET: pacientes
+        // GET: Consultas
         public async Task<IActionResult> Index()
         {
-              return _context.paciente != null ? 
-                          View(await _context.paciente.ToListAsync()) :
-                          Problem("Entity set 'DBContext.paciente'  is null.");
+              return _context.Consulta != null ? 
+                          View(await _context.Consulta.ToListAsync()) :
+                          Problem("Entity set 'DBContext.Consulta'  is null.");
         }
 
-        // GET: pacientes/Details/5
+        // GET: Consultas/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.paciente == null)
+            if (id == null || _context.Consulta == null)
             {
                 return NotFound();
             }
 
-            var paciente = await _context.paciente
-                .FirstOrDefaultAsync(m => m.IdPaciente == id);
-            if (paciente == null)
+            var consulta = await _context.Consulta
+                .FirstOrDefaultAsync(m => m.IdConsulta == id);
+            if (consulta == null)
             {
                 return NotFound();
             }
 
-            return View(paciente);
+            return View(consulta);
         }
 
-        // GET: pacientes/Create
+        // GET: Consultas/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: pacientes/Create
+        // POST: Consultas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdPaciente,Nome,Sobrenome")] paciente paciente)
+        public async Task<IActionResult> Create([Bind("IdConsulta,IdPaciente,DataConsulta,NomeMedico,FichaMedica")] Consulta consulta)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(paciente);
+                _context.Add(consulta);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(paciente);
+            return View(consulta);
         }
 
-        // GET: pacientes/Edit/5
+        // GET: Consultas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.paciente == null)
+            if (id == null || _context.Consulta == null)
             {
                 return NotFound();
             }
 
-            var paciente = await _context.paciente.FindAsync(id);
-            if (paciente == null)
+            var consulta = await _context.Consulta.FindAsync(id);
+            if (consulta == null)
             {
                 return NotFound();
             }
-            return View(paciente);
+            return View(consulta);
         }
 
-        // POST: pacientes/Edit/5
+        // POST: Consultas/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdPaciente,Nome,Sobrenome")] paciente paciente)
+        public async Task<IActionResult> Edit(int id, [Bind("IdConsulta,IdPaciente,DataConsulta,NomeMedico,FichaMedica")] Consulta consulta)
         {
-            if (id != paciente.IdPaciente)
+            if (id != consulta.IdConsulta)
             {
                 return NotFound();
             }
@@ -99,12 +99,12 @@ namespace WebApp000002.Controllers
             {
                 try
                 {
-                    _context.Update(paciente);
+                    _context.Update(consulta);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!pacienteExists(paciente.IdPaciente))
+                    if (!ConsultaExists(consulta.IdConsulta))
                     {
                         return NotFound();
                     }
@@ -115,49 +115,49 @@ namespace WebApp000002.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(paciente);
+            return View(consulta);
         }
 
-        // GET: pacientes/Delete/5
+        // GET: Consultas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.paciente == null)
+            if (id == null || _context.Consulta == null)
             {
                 return NotFound();
             }
 
-            var paciente = await _context.paciente
-                .FirstOrDefaultAsync(m => m.IdPaciente == id);
-            if (paciente == null)
+            var consulta = await _context.Consulta
+                .FirstOrDefaultAsync(m => m.IdConsulta == id);
+            if (consulta == null)
             {
                 return NotFound();
             }
 
-            return View(paciente);
+            return View(consulta);
         }
 
-        // POST: pacientes/Delete/5
+        // POST: Consultas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.paciente == null)
+            if (_context.Consulta == null)
             {
-                return Problem("Entity set 'DBContext.paciente'  is null.");
+                return Problem("Entity set 'DBContext.Consulta'  is null.");
             }
-            var paciente = await _context.paciente.FindAsync(id);
-            if (paciente != null)
+            var consulta = await _context.Consulta.FindAsync(id);
+            if (consulta != null)
             {
-                _context.paciente.Remove(paciente);
+                _context.Consulta.Remove(consulta);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool pacienteExists(int id)
+        private bool ConsultaExists(int id)
         {
-          return (_context.paciente?.Any(e => e.IdPaciente == id)).GetValueOrDefault();
+          return (_context.Consulta?.Any(e => e.IdConsulta == id)).GetValueOrDefault();
         }
     }
 }
