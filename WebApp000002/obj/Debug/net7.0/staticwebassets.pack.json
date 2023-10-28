@@ -21,6 +21,14 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
+      "Id": "D:\\TempASP\\WebApp000002\\WebApp000002\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-flatly.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-flatly.css"
+    },
+    {
+      "Id": "D:\\TempASP\\WebApp000002\\WebApp000002\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-flatly.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-flatly.min.css"
+    },
+    {
       "Id": "D:\\TempASP\\WebApp000002\\WebApp000002\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },

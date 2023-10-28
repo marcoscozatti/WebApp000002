@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VdE5Otk3LGOFjw18rfyD7Em9jvwnR/z+PVCjtMzRFOc=",
+  "Hash": "aLFQVBay6hW22DS2mNYmxAiQ8U632iQklUdBnnNuFDc=",
   "Source": "WebApp000002",
   "BasePath": "_content/WebApp000002",
   "Mode": "Default",
@@ -236,6 +236,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Identity": "D:\\TempASP\\WebApp000002\\WebApp000002\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-flatly.css",
+      "SourceId": "WebApp000002",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\TempASP\\WebApp000002\\WebApp000002\\wwwroot\\",
+      "BasePath": "_content/WebApp000002",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-flatly.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-flatly.css"
+    },
+    {
+      "Identity": "D:\\TempASP\\WebApp000002\\WebApp000002\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-flatly.min.css",
+      "SourceId": "WebApp000002",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\TempASP\\WebApp000002\\WebApp000002\\wwwroot\\",
+      "BasePath": "_content/WebApp000002",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-flatly.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-flatly.min.css"
     },
     {
       "Identity": "D:\\TempASP\\WebApp000002\\WebApp000002\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
