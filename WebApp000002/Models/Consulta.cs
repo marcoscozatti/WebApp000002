@@ -13,6 +13,6 @@ namespace WebApp000002.Models
         public string DataConsulta { get; set; }
         public string NomeMedico { get; set; }
         public string FichaMedica { get; set; }
-
+       
     }
 } 

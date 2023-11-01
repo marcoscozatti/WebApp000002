@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aLFQVBay6hW22DS2mNYmxAiQ8U632iQklUdBnnNuFDc=",
+  "Hash": "Z2RoYoUyXfbAicYmw1Cnsf0yf4x25O7z3vGPUnNUrXI=",
   "Source": "WebApp000002",
   "BasePath": "_content/WebApp000002",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\TempASP\\WebApp000002\\WebApp000002\\wwwroot\\imagens\\consultorio.jpeg",
+      "SourceId": "WebApp000002",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\TempASP\\WebApp000002\\WebApp000002\\wwwroot\\",
+      "BasePath": "_content/WebApp000002",
+      "RelativePath": "imagens/consultorio.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\consultorio.jpeg"
     },
     {
       "Identity": "D:\\TempASP\\WebApp000002\\WebApp000002\\wwwroot\\js\\site.js",

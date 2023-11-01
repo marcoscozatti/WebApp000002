@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\TempASP\\WebApp000002\\WebApp000002\\wwwroot\\imagens\\consultorio.jpeg",
+      "PackagePath": "staticwebassets\\imagens\\consultorio.jpeg"
+    },
+    {
       "Id": "D:\\TempASP\\WebApp000002\\WebApp000002\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
