@@ -1,13 +1,13 @@
 ﻿@model WebApp000002.Models.ConsultaModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Consultório Médico";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>Create</h1>
 
-<h4>Consulta</h4>
+<h4>Consulta Médica</h4>
 <hr />
 <div class="row"> 
     <div class="col-md-4">
@@ -17,16 +17,12 @@
             <select name="idPaciente" class="form-control">
                 @foreach (var item in Model.ListaPacientes)
                 {
-                    <option value="@item.IdPaciente">@item.NomeMedico</option>
+                    <option value="@item.IdPaciente">@item.Nome</option>
                 }
-            </select>
 
+            </select>
             <hr />
-            <div class="form-group">
-                <label asp-for="IdPaciente" class="control-label"></label>
-                <input asp-for="IdPaciente" class="form-control" />
-                <span asp-validation-for="IdPaciente" class="text-danger"></span>
-            </div>
+            
             <div class="form-group">
                 <label asp-for="DataConsulta" class="control-label"></label>
                 <input asp-for="DataConsulta" class="form-control" />
@@ -42,15 +38,19 @@
                 <input asp-for="FichaMedica" class="form-control" />
                 <span asp-validation-for="FichaMedica" class="text-danger"></span>
             </div>
+         
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+
+         
+
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar</a>
 </div>
 
 @section Scripts {

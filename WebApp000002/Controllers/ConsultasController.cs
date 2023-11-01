@@ -50,7 +50,7 @@ namespace WebApp000002.Controllers
         public IActionResult Create()
         {
             ConsultaModel model = new ConsultaModel();
-            model.ListaPacientes = _context.Consulta.ToList();
+            model.ListaPacientes = _context.paciente.ToList();
             return View(model);
         }
 

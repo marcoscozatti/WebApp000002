@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApp000002.Models
 {
-    public class Consulta
+    public class Consulta 
     {
 
         [Key]
@@ -14,7 +14,9 @@ namespace WebApp000002.Models
         public string NomeMedico { get; set; }
         public string FichaMedica { get; set; }
 
-        //public Consulta consulta { get; set; }
+       public string? Paciente { get; set; }
        
+
+      
     }
 } 

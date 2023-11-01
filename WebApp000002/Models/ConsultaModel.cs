@@ -9,6 +9,7 @@ namespace WebApp000002.Models
         public string DataConsulta { get; set; }
         public string NomeMedico { get; set; }
         public string FichaMedica { get; set; }
-        public List<Consulta> ListaPacientes { get; set; }
+
+        public List<paciente> ListaPacientes { get; set; }
     }
 }
