@@ -1,4 +1,4 @@
-﻿@model WebApp000002.Models.Consulta
+﻿@model WebApp000002.Models.ConsultaModel
 
 @{
     ViewData["Title"] = "Create";
@@ -9,10 +9,19 @@
 
 <h4>Consulta</h4>
 <hr />
-<div class="row">
+<div class="row"> 
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <label>Pacientes</label>
+            <select name="idPaciente" class="form-control">
+                @foreach (var item in Model.ListaPacientes)
+                {
+                    <option value="@item.IdPaciente">@item.NomeMedico</option>
+                }
+            </select>
+
+            <hr />
             <div class="form-group">
                 <label asp-for="IdPaciente" class="control-label"></label>
                 <input asp-for="IdPaciente" class="form-control" />

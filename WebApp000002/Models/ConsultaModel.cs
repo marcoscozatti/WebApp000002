@@ -1,20 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace WebApp000002.Models
 {
-    public class Consulta
+    public class ConsultaModel : paciente
     {
-
-        [Key]
         public int IdConsulta { get; set; }
         public int IdPaciente { get; set; }
         public string DataConsulta { get; set; }
         public string NomeMedico { get; set; }
         public string FichaMedica { get; set; }
-
-        //public Consulta consulta { get; set; }
-       
+        public List<Consulta> ListaPacientes { get; set; }
     }
-} 
+}

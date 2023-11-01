@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using WebApp000002.Data;
 using WebApp000002.Models;
 
+
 namespace WebApp000002.Controllers
 {
     public class ConsultasController : Controller
@@ -48,7 +49,9 @@ namespace WebApp000002.Controllers
         // GET: Consultas/Create
         public IActionResult Create()
         {
-            return View();
+            ConsultaModel model = new ConsultaModel();
+            model.ListaPacientes = _context.Consulta.ToList();
+            return View(model);
         }
 
         // POST: Consultas/Create
