@@ -13,16 +13,16 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <label>Pacientes</label>
+            <label>ID Pacientes</label>
             <select name="idPaciente" class="form-control">
                 @foreach (var item in Model.ListaPacientes)
                 {
                     <option value="@item.IdPaciente">@item.Nome</option>
                 }
 
-            </select>
+             </select>
             <hr />
-            
+
             <div class="form-group">
                 <label asp-for="DataConsulta" class="control-label"></label>
                 <input asp-for="DataConsulta" class="form-control" />
