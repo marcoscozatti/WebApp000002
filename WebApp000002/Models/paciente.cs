@@ -8,8 +8,8 @@ namespace WebApp000002.Models
     {
         [Key]
         public int IdPaciente { get; set; }
-        public string Nome { get; set; }
-        public string Sobrenome { get; set; }
+        public string NomePaciente { get; set; }
+        public string SobrenomePaciente { get; set; }
 
 
     }

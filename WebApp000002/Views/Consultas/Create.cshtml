@@ -1,28 +1,23 @@
-﻿@model WebApp000002.Models.ConsultaModel
+﻿@model WebApp000002.Models.Consulta
 
 @{
-    ViewData["Title"] = "Consultório Médico";
+    ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>Create</h1>
 
-<h4>Consulta Médica</h4>
+<h4>Consulta</h4>
 <hr />
-<div class="row"> 
+<div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <label>ID Pacientes</label>
-            <select name="idPaciente" class="form-control">
-                @foreach (var item in Model.ListaPacientes)
-                {
-                    <option value="@item.IdPaciente">@item.Nome</option>
-                }
-
-             </select>
-            <hr />
-
+            <div class="form-group">
+                <label asp-for="IdPaciente" class="control-label"></label>
+                <input asp-for="IdPaciente" class="form-control" />
+                <span asp-validation-for="IdPaciente" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="DataConsulta" class="control-label"></label>
                 <input asp-for="DataConsulta" class="form-control" />
@@ -38,19 +33,20 @@
                 <input asp-for="FichaMedica" class="form-control" />
                 <span asp-validation-for="FichaMedica" class="text-danger"></span>
             </div>
-         
+            <div class="form-group">
+                <label asp-for="Paciente" class="control-label"></label>
+                <input asp-for="Paciente" class="form-control" />
+                <span asp-validation-for="Paciente" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
-
-         
-
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Voltar</a>
+    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

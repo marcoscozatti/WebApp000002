@@ -8,7 +8,6 @@ using Microsoft.EntityFrameworkCore;
 using WebApp000002.Data;
 using WebApp000002.Models;
 
-
 namespace WebApp000002.Controllers
 {
     public class ConsultasController : Controller
@@ -49,9 +48,7 @@ namespace WebApp000002.Controllers
         // GET: Consultas/Create
         public IActionResult Create()
         {
-            ConsultaModel model = new ConsultaModel();
-            model.ListaPacientes = _context.paciente.ToList();
-            return View(model);
+            return View();
         }
 
         // POST: Consultas/Create
@@ -59,7 +56,7 @@ namespace WebApp000002.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdConsulta,IdPaciente,DataConsulta,NomeMedico,FichaMedica")] Consulta consulta)
+        public async Task<IActionResult> Create([Bind("IdConsulta,IdPaciente,DataConsulta,NomeMedico,FichaMedica,Paciente")] Consulta consulta)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +88,7 @@ namespace WebApp000002.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdConsulta,IdPaciente,DataConsulta,NomeMedico,FichaMedica")] Consulta consulta)
+        public async Task<IActionResult> Edit(int id, [Bind("IdConsulta,IdPaciente,DataConsulta,NomeMedico,FichaMedica,Paciente")] Consulta consulta)
         {
             if (id != consulta.IdConsulta)
             {

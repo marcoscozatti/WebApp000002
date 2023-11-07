@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TempASP\\WebApp000002\\WebApp000002\\WebApp000002.csproj": {}
+    "C:\\Users\\usuario\\source\\repos\\WebApp0002\\WebApp000002\\WebApp000002\\WebApp000002.csproj": {}
   },
   "projects": {
-    "D:\\TempASP\\WebApp000002\\WebApp000002\\WebApp000002.csproj": {
+    "C:\\Users\\usuario\\source\\repos\\WebApp0002\\WebApp000002\\WebApp000002\\WebApp000002.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TempASP\\WebApp000002\\WebApp000002\\WebApp000002.csproj",
+        "projectUniqueName": "C:\\Users\\usuario\\source\\repos\\WebApp0002\\WebApp000002\\WebApp000002\\WebApp000002.csproj",
         "projectName": "WebApp000002",
-        "projectPath": "D:\\TempASP\\WebApp000002\\WebApp000002\\WebApp000002.csproj",
-        "packagesPath": "C:\\Users\\marcoscozatti\\.nuget\\packages\\",
-        "outputPath": "D:\\TempASP\\WebApp000002\\WebApp000002\\obj\\",
+        "projectPath": "C:\\Users\\usuario\\source\\repos\\WebApp0002\\WebApp000002\\WebApp000002\\WebApp000002.csproj",
+        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\usuario\\source\\repos\\WebApp0002\\WebApp000002\\WebApp000002\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\marcoscozatti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -46,17 +44,52 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Laraue.EfCoreTriggers.SqlLite": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
